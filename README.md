@@ -13,7 +13,7 @@ Todo el proyecto fue desarrollado y ejecutado en **Google Colab**, por lo que se
 
 ## 📌 Objetivos del proyecto
 
-1. **Evaluar si los modelos secuenciales (LSTM y Transformer) pueden predecir el precio del Bitcoin usando únicamente variables OHLCV.**
+1. **Evaluar si los modelos secuenciales (LSTM y Transformer) pueden predecir el precio del Bitcoin utilizando el conjunto de variables OHLCV (Open, High, Low, Close, Volume).**
 2. **Probar dos escenarios temporales:**
    - **Caso 2024:** Entrenamiento con 9 meses, predicción semanal (horizonte H=7).
    - **Caso Histórico (2010–2024):** Entrenamiento con 14 años de datos, predicción mensual (horizonte H=30).
@@ -34,14 +34,14 @@ Todo el proyecto fue desarrollado y ejecutado en **Google Colab**, por lo que se
 - Entrenamiento por ventana con Adam, LR=1e-3
 
 ### 🔹 Transformer Encoder
-- `d_model = 64`
-- `nheads = 4`
+- d_model = 64
+- nheads = 4
 - 2 capas encoder
 - Activación GELU
 - AdamW, LR=1e-4
 - Positional Encoding sinusoidal propio
 
-Ambos modelos fueron entrenados entre **16 y 40 epochs por ventana**, con **repeticiones por ventana (ensembling)** para reducir la varianza de la predicción.
+Ambos modelos fueron entrenados entre **4 y 16 epochs por ventana**, con **repeticiones por ventana (ensembling)** para reducir la varianza de la predicción.
 
 ---
 
@@ -52,7 +52,6 @@ Ambos modelos fueron entrenados entre **16 y 40 epochs por ventana**, con **repe
 - Entrenamiento: 1 ene → 30 sep  
 - Prueba: 1 oct → 31 dic  
 - Horizonte: **7 días (predicción semanal)**  
-- Variables: `Open, High, Low, Close, Volume`  
 - Ventana: **60 días**
 
 ## 🟩 Caso 2 — Historia completa (2010–2024)
@@ -96,6 +95,10 @@ Todas las métricas están implementadas manualmente en el repositorio.
 ---
 
 # 📁 Estructura del código
+
+El código puede visualizarse directamente [aquí](Experimentacion_LSTMTransformer_Bitcoin.ipynb) o directamente en el notebook de [Google_Colab](https://colab.research.google.com/drive/1mSflyyC4mRUskUfOUhZFd-WnHKwKqr2x#scrollTo=Ph_Ts1AwjbuN).
+
+https://colab.research.google.com/drive/1mSflyyC4mRUskUfOUhZFd-WnHKwKqr2x
 
 El notebook contiene estos bloques principales:
 
