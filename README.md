@@ -96,9 +96,7 @@ Todas las métricas están implementadas manualmente en el repositorio.
 
 # 📁 Estructura del código
 
-El código puede visualizarse directamente [aquí](Experimentacion_LSTMTransformer_Bitcoin.ipynb) o directamente en el notebook de [Google_Colab](https://colab.research.google.com/drive/1mSflyyC4mRUskUfOUhZFd-WnHKwKqr2x#scrollTo=Ph_Ts1AwjbuN).
-
-https://colab.research.google.com/drive/1mSflyyC4mRUskUfOUhZFd-WnHKwKqr2x
+El código puede visualizarse directamente [aquí](Experimentacion_LSTMTransformer_Bitcoin.ipynb) o directamente en el notebook de [Google_Colab](https://colab.research.google.com/drive/1mSflyyC4mRUskUfOUhZFd-WnHKwKqr2x?usp=sharing).
 
 El notebook contiene estos bloques principales:
 
